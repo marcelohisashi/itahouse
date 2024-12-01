@@ -41,4 +41,7 @@ function salvarFeedback(feedback) {
   const feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || []
   feedbacks.push(feedback) // Adiciona o novo feedback à lista
   localStorage.setItem("feedbacks", JSON.stringify(feedbacks)) // Salva de volta no LocalStorage
+
+  alert("Feedback enviado com sucesso!");
 }
+
