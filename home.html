@@ -20,13 +20,18 @@
 
         h1 {
             color: #5a3d31;
-            margin-bottom: 40px; 
+            margin-bottom: 40px;
         }
 
         .itahouse {
             display: inline;
             font-size: xx-large;
-            margin-left: 5px
+            margin-left: 5px;
+        }
+        .botoes {
+            display: flex;
+            margin-top: 100px;
+            gap: 20px
         }
 
         button {
@@ -39,8 +44,9 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .botao {
-            margin-top:200px
+            margin-top: 200px
         }
 
         button:hover {
@@ -50,9 +56,12 @@
 </head>
 
 <body>
-    <h2>Bem-vindo(a) a <div class="itahouse">Itahouse</div></h2>
-    <div class="botao">
-        <button onclick="location.href='feedback.html'">Feedbacks</button>
+    <h2>Bem-vindo(a) a <div class="itahouse">Itahouse</div>
+    </h2>
+    <div class="botoes">
+        <button onclick="location.href='feedback.html'">Dar Feedback</button>
+
+        <button onclick="location.href='login.html'">Ver Feedback</button>
     </div>
 </body>
 
