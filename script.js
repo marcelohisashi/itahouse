@@ -42,28 +42,3 @@ function salvarFeedback(feedback) {
   feedbacks.push(feedback) // Adiciona o novo feedback à lista
   localStorage.setItem("feedbacks", JSON.stringify(feedbacks)) // Salva de volta no LocalStorage
 }
-
-// Função para carregar e exibir os feedbacks
-function carregarFeedbacks() {
-  feedbackDisplay.innerHTML = "" // Limpa a exibição
-  const feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || []
-
-  if (feedbacks.length === 0) {
-    feedbackDisplay.innerHTML = "<p>Nenhum feedback enviado ainda.</p>"
-    return
-  }
-
-  feedbacks.forEach((feedback) => {
-    const feedbackItem = document.createElement("div")
-    feedbackItem.classList.add("feedback-item")
-    feedbackItem.innerHTML = `
-      <p><strong>Nome:</strong> ${feedback.nome}</p>
-      <p><strong>Prato:</strong> ${feedback.prato}</p>
-      <p><strong>Avaliação:</strong> ${feedback.avaliacao}</p>
-      <p><strong>Críticas:</strong> ${feedback.criticas}</p>
-      <p><em>Enviado em: ${feedback.data}</em></p>
-      <hr>
-    `
-    feedbackDisplay.appendChild(feedbackItem)
-  })
-}
